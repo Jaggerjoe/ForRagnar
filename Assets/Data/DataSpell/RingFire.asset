@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2882b03a94ac51049bbe96e511320597, type: 3}
+  m_Name: RingFire
+  m_EditorClassIdentifier: 
+  itemName: RinfFire
+  icon: {fileID: 21300000, guid: 6e1682c2fcaf7dc44a5969f3eb1772f3, type: 3}
+  damages: 5
+  range: 1
+  nrUtilisation: 1
+  prefSpell: {fileID: 2145675331336427842, guid: 71cc5c8dc73b2464094909d3a2d607d1,
+    type: 3}

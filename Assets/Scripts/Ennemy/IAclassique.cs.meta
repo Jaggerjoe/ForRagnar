@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 21695a3a1fcd2214eb15909e50fe30f2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - player: {instanceID: 0}
+  - m_HealthGlob: {instanceID: 0}
+  - arme2: {instanceID: 0}
+  - monArme2: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
