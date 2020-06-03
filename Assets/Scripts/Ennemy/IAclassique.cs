@@ -8,6 +8,7 @@ public class IAclassique : MonoBehaviour
     public Transform player;
     NavMeshAgent agent;
     GlobalManager gM;
+    Deplacement forBlood;
     public ShakeCamera shakecam;
     public int speed = 10;
     int m_DRopRate = 25;
@@ -23,6 +24,7 @@ public class IAclassique : MonoBehaviour
     float timeBeforeMove;
     public virtual void Start()
     {
+        forBlood = FindObjectOfType<Deplacement>();
         gM = FindObjectOfType<GlobalManager>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = GetComponent<NavMeshAgent>();
@@ -75,6 +77,7 @@ public class IAclassique : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
+            forBlood.BloodParticles();
             collision.gameObject.GetComponent<Health>().SetDamages(damages);
             StartCoroutine(shakecam.Shake(1f, 0.2f));
         }

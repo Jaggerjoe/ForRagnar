@@ -10,6 +10,7 @@ public class Deplacement : MonoBehaviour
     PlayerControl controls;
     GameObject player;
     public ParticleSystem particle;
+    public ParticleSystem bloodParticle;
     InventorySlotUI loot;
     LevelManager manag;
     public TuToManager tuto;
@@ -243,8 +244,11 @@ public class Deplacement : MonoBehaviour
             }
         }
         //loot.Use();       
-    }   
-
+    }
+    public void BloodParticles()
+    {
+        bloodParticle.Play();
+    }
     public void MenuPause()
     {
         if (manag.ispaused)
