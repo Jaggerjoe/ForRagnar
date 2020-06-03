@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fireball 1
   m_EditorClassIdentifier: 
   itemName: FireBall
-  icon: {fileID: 21300000, guid: c12c9d64f233c1d4ea00e40da94332e0, type: 3}
+  icon: {fileID: 21300000, guid: 6266430e0887903469f03814e2251fc1, type: 3}
   damages: 50
   range: 1
   nrUtilisation: 1

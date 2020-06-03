@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: I_Need_Healing
   m_EditorClassIdentifier: 
   itemName: Potion
-  icon: {fileID: 21300000, guid: 4a9db9298a9b9114db6be7de7a01389c, type: 3}
+  icon: {fileID: 21300000, guid: df8c4a3c6b2ee6b40be9098f50a3e64a, type: 3}
   damages: 50
   range: 1
   nrUtilisation: 1
