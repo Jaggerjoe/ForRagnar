@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2882b03a94ac51049bbe96e511320597, type: 3}
   m_Name: RingFire
   m_EditorClassIdentifier: 
-  itemName: RinfFire
-  icon: {fileID: 21300000, guid: 6e1682c2fcaf7dc44a5969f3eb1772f3, type: 3}
+  itemName: RingFreeze
+  icon: {fileID: 21300000, guid: c889514fcf9414d4ca16be7e432827c4, type: 3}
   damages: 5
   range: 1
   nrUtilisation: 1
