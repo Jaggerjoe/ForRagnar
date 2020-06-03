@@ -83,12 +83,13 @@ public class Deplacement : MonoBehaviour
         if (tuto != null)
         {
             sword = tuto.weapon;
-            axe = tuto.axe;
+            axe = tuto.axe;            
         }
+
         if(loader.m_SaveWeapon != null)
         {
             SetWeapon();
-        }        
+        }      
     }
 
     private void OnEnable()
@@ -209,7 +210,7 @@ public class Deplacement : MonoBehaviour
         {
             ResetDashing();
         }
-        MenuPause();       
+        MenuPause();     
     }
 
     void Die()
@@ -296,7 +297,7 @@ public class Deplacement : MonoBehaviour
             sword.transform.parent = pivot.transform.parent;
             sword.transform.position = pivot.transform.position;
             sword.transform.rotation = pivot.transform.rotation;
-            equiped = true;
+            equiped = true;           
             weaponEquiped = arme1;
         }
 
@@ -313,5 +314,6 @@ public class Deplacement : MonoBehaviour
     void SetWeapon()
     {
         Instantiate(loader.m_SaveWeapon, pivot.transform.parent);
+        weaponEquiped = loader.m_SaveWeapon;
     }
 }
