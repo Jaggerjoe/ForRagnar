@@ -15,18 +15,25 @@ public class Ball : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision)
-    {      
+    {
+        Vector3 originPos = collision.gameObject.transform.position;
         if (collision.gameObject.layer == LayerMask.NameToLayer("Wall"))
         {
-            Destroy(gameObject);
-            Instantiate(explosion, collision.gameObject.transform.position, Quaternion.identity);
+            StartCoroutine(Explosion(originPos));
+            Destroy(gameObject);           
         }
 
         if (collision.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
-            Destroy(gameObject);
+            StartCoroutine(Explosion(originPos));           
             collision.gameObject.GetComponent<Health>().SetDamages((int)dataRef.damages);
-            Instantiate(explosion, collision.gameObject.transform.position, Quaternion.identity);            
+            Destroy(gameObject);
         }        
-    }       
+    }   
+    
+    public IEnumerator Explosion(Vector3 pos)
+    {
+        Instantiate(explosion, pos, Quaternion.identity);
+        yield return null;
+    }
 }

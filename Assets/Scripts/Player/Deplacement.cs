@@ -240,8 +240,7 @@ public class Deplacement : MonoBehaviour
                 if(potion != null)
                 {
                     
-                }
-                
+                }               
             }
         }
         //loot.Use();       
