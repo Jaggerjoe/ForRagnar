@@ -36,18 +36,18 @@ public class ProgressSceneLoader : MonoBehaviour
     private IEnumerator BeginLoad(string sceneName)
     {
         operation = SceneManager.LoadSceneAsync(sceneName);
-
-        while(!operation.isDone)
+        
+        while (!operation.isDone)
         {
-            UpdateProgressUI(operation.progress);           
+            UpdateProgressUI(operation.progress);
             yield return null;
-        }        
+        }
         UpdateProgressUI(operation.progress);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(5f);       
         operation = null;       
     }
    
-    private void UpdateProgressUI( float progress)
+    private void UpdateProgressUI(float progress)
     {
         slider.value = progress;
         progressText.text = (int)(progress * 100f) + "%";    

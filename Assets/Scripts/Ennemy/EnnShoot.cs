@@ -102,6 +102,5 @@ public class EnnShoot : IAclassique
         gM.ennemyShoot -= 1;
         Destroy(gameObject);
         DropHealth();
-        DropWeapon1();
     }
 }

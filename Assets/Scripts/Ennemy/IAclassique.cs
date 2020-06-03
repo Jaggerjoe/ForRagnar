@@ -103,28 +103,6 @@ public class IAclassique : MonoBehaviour
         }
     }
 
-    public void DropWeapon1()
-    {
-
-
-        if ((Random.Range(0, 100) >= 50) && (isArme1 == true))
-        {
-            Instantiate(arme2, this.transform.position, Quaternion.identity);
-            isArme2 = true;
-        }
-
-    }
-
-    public void DropWeapon2()
-    {
-        if ((Random.Range(0,100) >= 50) && (isArme2 == true))
-        {
-            Instantiate(arme1, this.transform.position, Quaternion.identity);
-            isArme1 = true;
-            
-        }
-    }
- 
     // fonction de mort de l'ennemi
     public virtual void Die ()
     {         
@@ -134,8 +112,6 @@ public class IAclassique : MonoBehaviour
         gM.m_EnemyDead += 1;
         gM.ennemyClassique -= 1;
         Destroy(gameObject);
-        DropHealth();
-        DropWeapon1();
+        DropHealth();      
     }
-
 }
