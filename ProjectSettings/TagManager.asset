@@ -10,6 +10,8 @@ TagManager:
   - Explosion
   - Axe
   - Sword
+  - Wall
+  - Sol
   layers:
   - Default
   - TransparentFX
