@@ -17,11 +17,9 @@ public class HideObject : MonoBehaviour
         RaycastHit hit;
         Debug.DrawRay(transform.position, transform.forward * 100f, Color.red);
         if (Physics.Raycast(transform.position, transform.forward, out hit))
-        {
-            Debug.Log(hit.transform.gameObject);
+        {         
             if (hit.collider.tag == "Wall")
-            {
-                Debug.Log("logo");
+            {      
                 pilier = hit.transform.gameObject;
                 rend = hit.transform.GetComponentInChildren<Renderer>();
                 maty = rend.materials;
@@ -39,18 +37,20 @@ public class HideObject : MonoBehaviour
                 }
             }
 
-            if(hit.collider.tag == "Sol")
-            {
-                Debug.Log("patates");
-                foreach (Material m in maty)
+            if(hit.collider.tag != "Wall")
+            {  
+                if(pilier != null)
                 {
-                    newColor = m.color;
-                    m.shader = Shader.Find("Standard");
-                    newColor.a = 1;
-                    m.color = newColor;
+                    foreach (Material m in maty)
+                    {
+                        newColor = m.color;
+                        m.shader = Shader.Find("Standard");
+                        newColor.a = 1;
+                        m.color = newColor;
+                    }
+                    pilier = null;
+                    maty = null;
                 }
-                pilier = null;
-                maty = null;
             }
         }
 
