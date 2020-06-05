@@ -165,17 +165,17 @@ public class Deplacement : MonoBehaviour
     #region MOVEMENT
 
     private void Movement()
-    {       
+    {
         //Vector2 dirInput = Vector2.zero;
         //dirInput.x = Input.GetAxis("Horizontal");
         //dirInput.y = Input.GetAxis("Vertical");
         if (inputDirMove.x != 0.0f || inputDirMove.y != 0.0f)
         {
+            SoundManager.Instance.Play("DeplacementPlayer");
             moveDir = new Vector3(inputDirMove.x, 0, inputDirMove.y).normalized;
             m_LastRotate = Quaternion.LookRotation(moveDir);
             transform.rotation = m_LastRotate;
-            transform.Translate(moveDir * speed * Time.deltaTime, Space.World);
-            SoundManager.Instance.Play("DeplacementPlayer");
+            transform.Translate(moveDir * speed * Time.deltaTime, Space.World);            
             isMoving = true;           
         }
         else
@@ -190,7 +190,7 @@ public class Deplacement : MonoBehaviour
     {
         if(isMoving)
         {
-            particle.Play();
+            particle.Play();         
         }
         else if(!isMoving)
         {
