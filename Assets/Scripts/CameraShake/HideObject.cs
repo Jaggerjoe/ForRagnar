@@ -10,7 +10,7 @@ public class HideObject : MonoBehaviour
     int size;
     Renderer rend;
     Color newColor;
-    float alpha = 0f;
+    float alpha = 0.2f;
     // Update is called once per frame
     void Update()
     {
@@ -38,7 +38,7 @@ public class HideObject : MonoBehaviour
             }
 
             if(hit.collider.tag != "Wall")
-            {  
+            {               
                 if(pilier != null)
                 {
                     foreach (Material m in maty)

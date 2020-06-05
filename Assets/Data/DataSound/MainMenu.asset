@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MainMenu
   m_EditorClassIdentifier: 
   naming: MainMenu
-  clip: {fileID: 8300000, guid: 6b8e8813b63141f46a7b02f21943ea8b, type: 3}
+  clip: {fileID: 8300000, guid: f0a1e2d24311abb43b4089ac15fb31cc, type: 3}
   volume: 0.321
   pitch: 1
   loop: 0
