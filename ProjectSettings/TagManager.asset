@@ -10,6 +10,8 @@ TagManager:
   - Explosion
   - Axe
   - Sword
+  - Wall
+  - Sol
   layers:
   - Default
   - TransparentFX
@@ -28,7 +30,7 @@ TagManager:
   - Wall
   - Spirit
   - FireBall
-  - 
+  - PostProcessing
   - 
   - 
   - 

@@ -34,7 +34,10 @@ public class GlobalManager : MonoBehaviour
     public int ennemyClassique = 0;
     public int ennemyShoot = 0;
     public float m_EnemyDead;
-
+    [SerializeField]
+    int ValMin;
+    [SerializeField]
+    int ValMax;
     public float m_MexEnemy;
 
     [SerializeField]
@@ -71,10 +74,10 @@ public class GlobalManager : MonoBehaviour
 
                 for (int i = 0; i < spawnSameTime; i++)
                 {
-                    xPos = Random.Range(-45, 45);
-                    xPosDist = Random.Range(-45, 45);
-                    zPos = Random.Range(-45, 45);
-                    zPosDist = Random.Range(-45, 45);
+                    xPos = Random.Range(-ValMin, ValMax);
+                    xPosDist = Random.Range(-ValMin, ValMax);
+                    zPos = Random.Range(-ValMin, ValMax);
+                    zPosDist = Random.Range(-ValMin, ValMax);
                     Vector3 pos = new Vector3(xPos, 1, zPos);
                     Vector3 posDist = new Vector3(xPosDist, 1, zPosDist);
                     StartCoroutine(CreateEnemyCac(pos));
