@@ -222,7 +222,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.4022339, g: 0.6509434, b: 0.45587713, a: 1}
+      maxColor: {r: 0, g: 0.97979045, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4976,7 +4976,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 0.34816694, b: 1, a: 1}
+      maxColor: {r: 0, g: 0.8595505, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9622,6 +9622,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Lightmapping
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097748975483176000, guid: dd92b34f18c543c4cb7916253861f33b,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.9500494
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097748975483176000, guid: dd92b34f18c543c4cb7916253861f33b,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7097748975483176000, guid: dd92b34f18c543c4cb7916253861f33b,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd92b34f18c543c4cb7916253861f33b, type: 3}

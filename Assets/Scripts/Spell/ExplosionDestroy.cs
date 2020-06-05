@@ -28,7 +28,7 @@ public class ExplosionDestroy : MonoBehaviour
             timeBeforeDestroy += Time.deltaTime;
         }
 
-        if(timeBeforeDestroy >= 2)
+        if(timeBeforeDestroy >= 2 && explosion != null)
         {
             Destroy(explosion);
         }
