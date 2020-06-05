@@ -38,8 +38,7 @@ public class HideObject : MonoBehaviour
             }
 
             if(hit.collider.tag != "Wall")
-            {
-                Debug.Log(hit.collider.tag);
+            {               
                 if(pilier != null)
                 {
                     foreach (Material m in maty)

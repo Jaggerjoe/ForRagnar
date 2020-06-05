@@ -826,19 +826,28 @@ MonoBehaviour:
   timeBeforeEnemySpawn: 2
   currentTimeBeforeEnemySpawn: 0
   limitEnemySpawn: 5
+  limitClassique: 3
+  limitShoot: 2
   spawnSameTime: 5
-  xPos: 0
-  zPos: 0
-  EnnemiClassique: {fileID: 5440766680520508792, guid: 8d8ab0d1d69056e4caa036a497b09b70,
-    type: 3}
+  ennemiClassique: {fileID: 0}
+  ennemiShooter: {fileID: 0}
   prefabPlayer: {fileID: 8348880848252304253, guid: 2ad54184c73f5434c94d191cee977e48,
     type: 3}
   SpawnPlayer: {fileID: 0}
   playerLife: {fileID: 0}
+  playerWeapon: {fileID: 0}
+  weapon: {fileID: 0}
+  pivot: {fileID: 0}
   life: 0
   enemyNumber: 0
+  ennemyClassique: 0
+  ennemyShoot: 0
   m_EnemyDead: 0
+  ValMin: 0
+  ValMax: 0
   m_MexEnemy: 10
+  particlecircle: {fileID: 0}
+  nextScene: 
 --- !u!4 &1170357570
 Transform:
   m_ObjectHideFlags: 0

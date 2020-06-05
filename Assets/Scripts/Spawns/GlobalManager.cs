@@ -43,6 +43,8 @@ public class GlobalManager : MonoBehaviour
     [SerializeField]
     GameObject particlecircle = null;
     float timeBeforeSpawn;
+    [SerializeField]
+    string nextScene;
 
     private void Awake()
     {  
@@ -107,7 +109,7 @@ public class GlobalManager : MonoBehaviour
         life = playerLife.health;
         weapon = playerWeapon.weaponEquiped;              
         loader.SaveData(life, weapon);              
-        loader.LoadScene("GameScene");       
+        loader.LoadScene(nextScene);       
     }
 
     public void OnTriggerEnter(Collider other)
