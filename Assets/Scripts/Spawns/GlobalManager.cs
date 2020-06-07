@@ -44,7 +44,7 @@ public class GlobalManager : MonoBehaviour
     GameObject particlecircle = null;
     float timeBeforeSpawn;
     [SerializeField]
-    string nextScene;
+    string nextScene = null;
 
     private void Awake()
     {  
@@ -101,7 +101,7 @@ public class GlobalManager : MonoBehaviour
         }           
     }
 
-    void Victory()
+    public void Victory()
     {
         //SceneManager.LoadScene("Scene2");
         //Sauvegarde de la vie/Data

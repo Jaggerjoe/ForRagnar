@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Deplacement : MonoBehaviour
 {
-    PlayerControl controls;
+    public PlayerControl controls;
     GameObject player;
     public ParticleSystem particle;
     public ParticleSystem bloodParticle;
@@ -73,13 +73,14 @@ public class Deplacement : MonoBehaviour
         particle = GetComponentInChildren<ParticleSystem>();
         manag = FindObjectOfType<LevelManager>();
         loader = FindObjectOfType<ProgressSceneLoader>();
+        tuto = FindObjectOfType<TuToManager>();
     }
 
     private void Start()
     {
         m_TimeBetaweenTwoDash = nextDashing;
         loot = FindObjectOfType<InventorySlotUI>();
-        tuto = FindObjectOfType<TuToManager>();
+        
         if (tuto != null)
         {
             sword = tuto.weapon;
@@ -92,7 +93,7 @@ public class Deplacement : MonoBehaviour
         }      
     }
 
-    private void OnEnable()
+    public void OnEnable()
     {
         if(controls != null)
         {
@@ -100,7 +101,7 @@ public class Deplacement : MonoBehaviour
         }       
     }
 
-    private void OnDisable()
+    public void OnDisable()
     {
         if (controls != null)
         {
@@ -210,7 +211,19 @@ public class Deplacement : MonoBehaviour
         {
             ResetDashing();
         }
-        MenuPause();     
+        MenuPause();   
+        if(tuto !=null)
+        {
+            if (tuto.tuto == false)
+            {
+                controls.Disable();
+            }
+            if (tuto.tuto)
+            {
+                controls.Enable();
+            }
+        }
+        
     }
 
     void Die()
