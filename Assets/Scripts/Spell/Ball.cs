@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 { 
-    GameObject target;
     public Spell dataRef;
     [SerializeField]
     GameObject explosion = null;  
@@ -29,6 +28,14 @@ public class Ball : MonoBehaviour
             collision.gameObject.GetComponent<Health>().SetDamages((int)dataRef.damages);
             Destroy(gameObject);
         }        
+
+        if(collision.gameObject.layer == LayerMask.NameToLayer("Mummy"))
+        {
+            StartCoroutine(Explosion(originPos));
+            collision.gameObject.GetComponent<SetDamages>().AffichagesDegats(dataRef.damages);
+            collision.gameObject.GetComponent<SetDamages>().PlayAnim();
+            Destroy(gameObject);
+        }
     }   
     
     public IEnumerator Explosion(Vector3 pos)
@@ -37,3 +44,4 @@ public class Ball : MonoBehaviour
         yield return null;
     }
 }
+

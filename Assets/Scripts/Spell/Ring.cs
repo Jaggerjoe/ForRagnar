@@ -33,5 +33,12 @@ public class Ring : MonoBehaviour
             other.gameObject.GetComponent<Health>().SetDamages((int)datSpell.damages);
             other.gameObject.GetComponent<IAclassique>().isStun = true;           
         }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("Mummy"))
+        {         
+            other.gameObject.GetComponent<SetDamages>().AffichagesDegats(datSpell.damages);
+            other.gameObject.GetComponent<SetDamages>().PlayAnim();
+            other.gameObject.GetComponent<SetDamages>().isStun = true;
+        }
     }
 }

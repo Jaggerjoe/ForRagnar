@@ -24748,7 +24748,6 @@ GameObject:
   - component: {fileID: 4541817852653670617}
   - component: {fileID: 6425047345440109854}
   - component: {fileID: 34896693439861198}
-  - component: {fileID: 7666891974666995735}
   - component: {fileID: 788379108258349063}
   - component: {fileID: 3928234292788596700}
   - component: {fileID: 2646064439797210962}
@@ -24823,22 +24822,6 @@ MonoBehaviour:
   OnDie:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &7666891974666995735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8348880848252304253}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 246adcbfdc27ef74d8c6913ec60bdb76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arme2: {fileID: 5417481596684421868, guid: 7aee1c8ac86ed4440aa66cbec6964a33, type: 3}
-  arme1: {fileID: 0}
-  pivot: {fileID: 3886750012235613357}
-  isTrigger: 0
 --- !u!114 &788379108258349063
 MonoBehaviour:
   m_ObjectHideFlags: 0

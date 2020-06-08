@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9210226543109113623}
   - component: {fileID: 5497094279500820825}
   - component: {fileID: 2000335710383775434}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Particle System (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4782,7 +4782,7 @@ GameObject:
   - component: {fileID: 8953746618551216625}
   - component: {fileID: 4979130558132894233}
   - component: {fileID: 6091933781791715728}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4849,7 +4849,7 @@ GameObject:
   - component: {fileID: 5006081216478124695}
   - component: {fileID: 1589547944238112543}
   - component: {fileID: 2934756444201264734}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9634,7 +9634,7 @@ GameObject:
   - component: {fileID: 2147445977820591594}
   - component: {fileID: 6724273236628417873}
   - component: {fileID: 5788089916907442909}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Particle System (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14479,6 +14479,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Donut
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 8265cae19ac9bcb40bba102a8fd92770,
+        type: 3}
+      propertyPath: m_Layer
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -1504981713932161579, guid: 8265cae19ac9bcb40bba102a8fd92770, type: 3}
