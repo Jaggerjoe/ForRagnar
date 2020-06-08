@@ -152,7 +152,7 @@ public class Deplacement : MonoBehaviour
     
     public void MeleAttack()
     {
-        anim.Play("Attack 0", 0, 0.2f);
+        //anim.Play("Attack 0", 0, 0.2f);
         attack = true;      
     }
 

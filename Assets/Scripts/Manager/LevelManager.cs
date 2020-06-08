@@ -7,11 +7,12 @@ public class LevelManager : MonoBehaviour
 {
     public GameObject PauseMenuUI;
     ProgressSceneLoader loader;
-    public bool ispaused = true;
-
+    public bool ispaused = false;
+    Deplacement player;
     private void Start()
     {
         loader = FindObjectOfType<ProgressSceneLoader>();
+        player = FindObjectOfType<Deplacement>();
     }
     private void Update()
     {
@@ -22,15 +23,16 @@ public class LevelManager : MonoBehaviour
         else if (Time.timeScale == 1)
         {
             ispaused = false;           
-        }
+        }       
     }
 
     public void MenuPause()
     {          
         PauseMenuUI.SetActive(true);
-        Time.timeScale = 0; SoundManager.Instance.Stop("Theme");
+        Time.timeScale = 0;       
         SoundManager.Instance.Stop("Theme");
         SoundManager.Instance.Play("Menu");
+        player.controls.Disable();
     }
 
     public void Resume()
@@ -38,7 +40,8 @@ public class LevelManager : MonoBehaviour
         SoundManager.Instance.Stop("Menu");
         SoundManager.Instance.Play("Theme");
         PauseMenuUI.SetActive(false);
-        Time.timeScale = 1;               
+        Time.timeScale = 1;
+        player.controls.Enable();
     }
 
     public void Quit()
