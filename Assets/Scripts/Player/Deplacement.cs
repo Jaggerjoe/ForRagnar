@@ -155,12 +155,12 @@ public class Deplacement : MonoBehaviour
     public void MeleAttack()
     {
         //anim.Play("Attack 0", 0, 0.2f);
+        anim.SetBool("Attacking", true);
         attack = true;      
     }
 
     public void CallEvent()
-    {
-
+    {       
         attack = false;      
     }
     #endregion
@@ -230,11 +230,19 @@ public class Deplacement : MonoBehaviour
         
     }
 
-    void Die()
+    public void Die()
     {
-        SceneManager.LoadScene("GameOver");
-        Time.timeScale = 0;
+        Debug.Log("hello");
+        anim.SetBool("Death", true);
+        //StartCoroutine(DeathPlayer());
     }
+
+    //IEnumerator DeathPlayer()
+    //{        
+    //    yield return new WaitForSeconds(5);
+    //    SceneManager.LoadScene("GameOver");
+    //    Time.timeScale = 0;
+    //}
 
     void UseSlotInventory()
     {
