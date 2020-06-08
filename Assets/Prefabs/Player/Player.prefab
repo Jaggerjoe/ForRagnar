@@ -19438,7 +19438,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: bef701282f4b3ed4b874e14c18b4c4ab, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -24839,7 +24839,18 @@ MonoBehaviour:
   health: 50
   OnDie:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6425047345440109854}
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &788379108258349063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25116,15 +25127,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c746e9b05b378df4ba6c6eeff2081795, type: 3}
---- !u!4 &2169247177096121375 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: c746e9b05b378df4ba6c6eeff2081795,
-    type: 3}
-  m_PrefabInstance: {fileID: 6584264987337615109}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2900862455112777228 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: c746e9b05b378df4ba6c6eeff2081795,
+    type: 3}
+  m_PrefabInstance: {fileID: 6584264987337615109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2169247177096121375 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: c746e9b05b378df4ba6c6eeff2081795,
     type: 3}
   m_PrefabInstance: {fileID: 6584264987337615109}
   m_PrefabAsset: {fileID: 0}

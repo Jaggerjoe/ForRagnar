@@ -25,4 +25,12 @@ public class Health : MonoBehaviour
     {      
         OnDie?.Invoke();             
     }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.K))
+        {
+            health = -5;
+        }
+    }
 }
