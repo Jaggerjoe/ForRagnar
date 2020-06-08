@@ -29,7 +29,7 @@ public class SkipIntro : MonoBehaviour
             anim.SetBool("Done",false);
             SoundManager.Instance.Stop("Intro");
             manag.timer = 65f;
-            Destroy(gameObject);
+            Destroy(cam);
         }
     }
 }

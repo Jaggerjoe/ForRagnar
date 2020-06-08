@@ -126,6 +126,7 @@ public class Deplacement : MonoBehaviour
                 slider.value = 0;
                 gameObject.layer = 15;                
                 SoundManager.Instance.Play("DashPlayer");
+                anim.SetBool("Dashing", true);
             }
         }     
     }
@@ -138,7 +139,8 @@ public class Deplacement : MonoBehaviour
             m_IsDashing = false;
             timer = 0;            
             rb.velocity = Vector3.zero;
-            gameObject.layer = 8;                                                               
+            gameObject.layer = 8;
+            anim.SetBool("Dashing", false);
         }
         else
         {
@@ -178,10 +180,11 @@ public class Deplacement : MonoBehaviour
             transform.rotation = m_LastRotate;
             transform.Translate(moveDir * speed * Time.deltaTime, Space.World);            
             isMoving = true;
-            anim.Play("Course");
+            anim.SetBool("Run", true);
         }
         else
         {
+            anim.SetBool("Run", false);
             isMoving = false;
         }
     }
@@ -259,10 +262,12 @@ public class Deplacement : MonoBehaviour
         }
         //loot.Use();       
     }
+
     public void BloodParticles()
     {
         bloodParticle.Play();
     }
+
     public void MenuPause()
     {
         if (manag.ispaused)
@@ -275,6 +280,7 @@ public class Deplacement : MonoBehaviour
         }
     }
 
+    #region lootweapon
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("weapon1"))
@@ -329,4 +335,5 @@ public class Deplacement : MonoBehaviour
         Instantiate(loader.m_SaveWeapon, pivot.transform.parent);
         weaponEquiped = loader.m_SaveWeapon;
     }
+    #endregion
 }
