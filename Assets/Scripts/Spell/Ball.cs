@@ -32,7 +32,8 @@ public class Ball : MonoBehaviour
         if(collision.gameObject.layer == LayerMask.NameToLayer("Mummy"))
         {
             StartCoroutine(Explosion(originPos));
-            collision.gameObject.GetComponent<SetDamages>().AffichagesDegats(dataRef.damages);             
+            collision.gameObject.GetComponent<SetDamages>().AffichagesDegats(dataRef.damages);
+            collision.gameObject.GetComponent<SetDamages>().PlayAnim();
             Destroy(gameObject);
         }
     }   
@@ -41,11 +42,6 @@ public class Ball : MonoBehaviour
     {
         Instantiate(explosion, pos, Quaternion.identity);
         yield return null;
-    }
-
-    public void AffichageDegats()
-    {
-
     }
 }
 

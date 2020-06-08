@@ -13,9 +13,7 @@ public class TuToManager : MonoBehaviour
     GameObject prefFireB, prefGivre, prefHeal;
     public Transform emplacement1, emplacment2, fireEmplacement,GivreEmplacement,healEmplacement;
     public Collider colide;
-    public Animator anim,animTuto;
-    bool playingAnim = false;
-    Deplacement player;
+    public Animator anim;   
     public bool tuto = false;
     public float timer;
     // Start is called before the first frame update
@@ -25,8 +23,7 @@ public class TuToManager : MonoBehaviour
         axe = Instantiate(arme2, emplacment2.position, Quaternion.identity);
         prefFireB = Instantiate(fireBall, fireEmplacement.position, Quaternion.identity);
         prefGivre = Instantiate(Givre, GivreEmplacement.position, Quaternion.identity);
-        prefHeal = Instantiate(Heal, healEmplacement.position, Quaternion.identity);
-        player = FindObjectOfType<Deplacement>();       
+        prefHeal = Instantiate(Heal, healEmplacement.position, Quaternion.identity);          
     }
 
     void Start()
@@ -51,11 +48,13 @@ public class TuToManager : MonoBehaviour
         {
             prefHeal = Instantiate(Heal, healEmplacement.position, Quaternion.identity);
         }
+
         if(weapon.transform.position != emplacement1.transform.position)
         {
             colide.gameObject.SetActive(true);
             anim.SetBool("Open", true);
         }
+
         timer += Time.deltaTime;
         if(timer >= 65)
         {

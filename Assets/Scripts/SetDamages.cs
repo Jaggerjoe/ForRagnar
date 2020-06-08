@@ -8,6 +8,9 @@ public class SetDamages : MonoBehaviour
     public Text afficheDegats;
     Animator anim;
     bool animDone = false;
+    public GameObject particles;
+    public bool isStun = false;
+    float timeBeforeMove;
     // Start is called before the first frame update
     void Start()
     {      
@@ -17,22 +20,37 @@ public class SetDamages : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        StunEnemy();
     }
 
-    public void OnCollisionEnter(Collision collision)
+    public void PlayAnim()
     {
-        if(collision.gameObject.layer == LayerMask.NameToLayer("FireBall"))
-        {
-            anim.SetBool("Yes", true);
-        }
+        anim.SetBool("Yes", true);
     }
+
     public void AffichagesDegats(int damages)
-    {
+    {       
         afficheDegats.text = damages.ToString();
     }
+
     public void StopAnim()
     {
         anim.SetBool("Yes", false);
+    }
+
+    public  void StunEnemy()
+    {
+        if (isStun)
+        {           
+            timeBeforeMove += Time.deltaTime;
+            particles.SetActive(true);
+        }
+
+        if (timeBeforeMove >= 5)
+        {
+            particles.gameObject.SetActive(false);          
+            timeBeforeMove = 0;
+            isStun = false;           
+        }
     }
 }

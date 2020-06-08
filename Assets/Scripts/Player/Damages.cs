@@ -8,8 +8,6 @@ public class Damages : MonoBehaviour
     public int damages;
     
     public bool isOnPlayer = true;
-  
-
 
     private void OnTriggerEnter(Collider other)
     {
@@ -24,6 +22,11 @@ public class Damages : MonoBehaviour
                 {              
                      other.gameObject.GetComponent<Health>().SetDamages(damages);
                      other.gameObject.transform.Translate(0f , 0f, -3f);
+                }
+                if (other.gameObject.layer == LayerMask.NameToLayer("Mummy"))
+                {
+                    other.gameObject.GetComponent<SetDamages>().AffichagesDegats(damages);
+                    other.gameObject.GetComponent<SetDamages>().PlayAnim();               
                 }
             }   
         }        

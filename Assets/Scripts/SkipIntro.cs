@@ -23,6 +23,7 @@ public class SkipIntro : MonoBehaviour
             anim.SetBool("Done", true);
             isActive = true;
         }
+
         if(Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetBool("Done",false);
