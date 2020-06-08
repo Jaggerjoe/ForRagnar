@@ -17,7 +17,7 @@ public class TuToManager : MonoBehaviour
     bool playingAnim = false;
     Deplacement player;
     public bool tuto = false;
-    float timer;
+    public float timer;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -61,7 +61,6 @@ public class TuToManager : MonoBehaviour
         {
             tuto = true;
             timer = 0;
-        }
-        Debug.Log(timer);
+        }       
     }
 }

@@ -570,6 +570,7 @@ GameObject:
   - component: {fileID: 359588332}
   - component: {fileID: 359588331}
   - component: {fileID: 359588330}
+  - component: {fileID: 359588333}
   m_Layer: 0
   m_Name: PosCamera
   m_TagString: Untagged
@@ -625,6 +626,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &359588333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359588329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b040e6703aa67e648839f23e55e67abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 2007448780}
+  cam2: {fileID: 1439659699}
 --- !u!1001 &388711230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1051,6 +1066,7 @@ MonoBehaviour:
   anim: {fileID: 267363654}
   animTuto: {fileID: 0}
   tuto: 0
+  timer: 0
 --- !u!4 &496633780
 Transform:
   m_ObjectHideFlags: 0
@@ -2982,6 +2998,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!20 &1439659699 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7588584256549183086, guid: 228fa0f24f6069449b096f2121acac4b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1444860553}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1444860553
 PrefabInstance:
   m_ObjectHideFlags: 0
