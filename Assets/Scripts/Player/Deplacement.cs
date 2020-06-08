@@ -68,7 +68,7 @@ public class Deplacement : MonoBehaviour
         controls.Gameplay.Move.performed += ctx => inputDirMove = ctx.ReadValue<Vector2>();
         controls.Gameplay.Move.canceled += ctx => inputDirMove = Vector2.zero;
         GetComponent<Health>().OnDie.AddListener(Die);
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
         rb = GetComponent<Rigidbody>();
         particle = GetComponentInChildren<ParticleSystem>();
         manag = FindObjectOfType<LevelManager>();
@@ -177,7 +177,8 @@ public class Deplacement : MonoBehaviour
             m_LastRotate = Quaternion.LookRotation(moveDir);
             transform.rotation = m_LastRotate;
             transform.Translate(moveDir * speed * Time.deltaTime, Space.World);            
-            isMoving = true;           
+            isMoving = true;
+            anim.Play("Course");
         }
         else
         {
