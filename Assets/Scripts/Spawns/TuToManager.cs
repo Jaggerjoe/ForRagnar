@@ -16,9 +16,11 @@ public class TuToManager : MonoBehaviour
     public Animator anim;   
     public bool tuto = false;
     public float timer;
+    LevelManager levelmanag;
     // Start is called before the first frame update
     private void Awake()
     {
+        levelmanag = FindObjectOfType<LevelManager>();
         weapon = Instantiate(arme1, emplacement1.position, Quaternion.identity);
         axe = Instantiate(arme2, emplacment2.position, Quaternion.identity);
         prefFireB = Instantiate(fireBall, fireEmplacement.position, Quaternion.identity);
@@ -33,14 +35,14 @@ public class TuToManager : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {       
+    {             
         if (prefFireB == null)
-        {          
+        {
             prefFireB = Instantiate(fireBall, fireEmplacement.position, Quaternion.identity);
-        }        
+        }
 
         if (prefGivre == null)
-        {    
+        {
             prefGivre = Instantiate(Givre, GivreEmplacement.position, Quaternion.identity);
         }
 
@@ -49,17 +51,17 @@ public class TuToManager : MonoBehaviour
             prefHeal = Instantiate(Heal, healEmplacement.position, Quaternion.identity);
         }
 
-        if(weapon.transform.position != emplacement1.transform.position)
+        if (weapon.transform.position != emplacement1.transform.position)
         {
             colide.gameObject.SetActive(true);
             anim.SetBool("Open", true);
         }
 
         timer += Time.deltaTime;
-        if(timer >= 65)
+        if (timer >= 65)
         {
             tuto = true;
             timer = 0;
-        }       
+        }                 
     }
 }
