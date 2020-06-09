@@ -102,7 +102,9 @@ public class GlobalManager : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.M))
         {
-            Victory();
+            anim.SetBool("Open", true);
+            collide.SetActive(true);
+            //Victory();
         }           
     }
 

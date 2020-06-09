@@ -57,6 +57,12 @@ public class TuToManager : MonoBehaviour
             anim.SetBool("Open", true);
         }
 
+        if (axe.transform.position != emplacment2.transform.position)
+        {
+            colide.gameObject.SetActive(true);
+            anim.SetBool("Open", true);
+        }
+
         timer += Time.deltaTime;
         if (timer >= 65)
         {
