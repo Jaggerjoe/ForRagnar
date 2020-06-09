@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3357586f34d40c40a2c16f77d9557d6, type: 3}
-  m_Name: Tutorial
+  m_Name: Explosion
   m_EditorClassIdentifier: 
-  naming: Theme
-  clip: {fileID: 8300000, guid: e7a8d86b659146e43a59488c292b749a, type: 3}
-  volume: 0.2
+  naming: Explosion
+  clip: {fileID: 8300000, guid: 5330819ce93a4b84c837d0c3a5ca11fa, type: 3}
+  volume: 0.1
   pitch: 1
   loop: 0
   source: {fileID: 0}

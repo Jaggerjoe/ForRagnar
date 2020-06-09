@@ -45,6 +45,10 @@ public class GlobalManager : MonoBehaviour
     float timeBeforeSpawn;
     [SerializeField]
     string nextScene = null;
+    [SerializeField]
+    Animator anim;
+    [SerializeField]
+    GameObject collide;
 
     private void Awake()
     {  
@@ -91,7 +95,8 @@ public class GlobalManager : MonoBehaviour
         {
             if ((m_EnemyDead >= m_MexEnemy) && (enemyNumber == 0))
             {
-                Victory();                
+                anim.SetBool("Open", true);
+                collide.SetActive(true);                               
             }
         }     
 

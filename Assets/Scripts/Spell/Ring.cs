@@ -14,7 +14,8 @@ public class Ring : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        this.transform.SetParent(player.transform);   
+        this.transform.SetParent(player.transform);
+        SoundManager.Instance.Play("Givre");
     }
 
     private void Update()
