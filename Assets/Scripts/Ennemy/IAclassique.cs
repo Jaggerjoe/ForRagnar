@@ -78,6 +78,7 @@ public class IAclassique : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             forBlood.BloodParticles();
+            forBlood.degatAnim();
             collision.gameObject.GetComponent<Health>().SetDamages(damages);
             StartCoroutine(shakecam.Shake(1f, 0.2f));
         }

@@ -233,7 +233,9 @@ public class Deplacement : MonoBehaviour
     public void Die()
     {
         Debug.Log("hello");
-        anim.SetBool("Death", true);
+        anim.Play("Mort");
+        controls.Gameplay.Disable();
+       // anim.SetBool("mort", true);
         //StartCoroutine(DeathPlayer());
     }
 
@@ -288,6 +290,11 @@ public class Deplacement : MonoBehaviour
         }
     }
 
+    public void degatAnim()
+    {
+        anim.Play("Frappé");
+
+    }
     #region lootweapon
     private void OnTriggerStay(Collider other)
     {

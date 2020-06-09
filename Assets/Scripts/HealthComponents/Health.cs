@@ -10,10 +10,14 @@ public class Health : MonoBehaviour
     public int hpMax = 50;
     public int health = 50;
     public UnityEvent OnDie;
-    
+   
+
+
+   
     public virtual void SetDamages(int damages)
     {
         health -= damages;
+    
 
         if(health <= 0)
         {
