@@ -18,6 +18,7 @@ public class ExplosionDestroy : MonoBehaviour
     void Start()
     {
         explosion = GameObject.FindGameObjectWithTag("Explosion");
+        SoundManager.Instance.Play("Explosion");
     }
 
     // Update is called once per frame

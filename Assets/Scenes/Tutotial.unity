@@ -5021,6 +5021,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7f15055254f4ac34eba6742e3088566f, type: 2}
   - {fileID: 11400000, guid: 2fdf420bbf04081419b7124bb371adc5, type: 2}
   - {fileID: 11400000, guid: be94b56a6bd99e643a3c5c180fe95afa, type: 2}
+  - {fileID: 11400000, guid: 2b704f30bb802fc4a8f0e9b1d7f0d64b, type: 2}
+  - {fileID: 11400000, guid: 7ce82842249d93745a11841158770270, type: 2}
   namesound: Theme
 --- !u!4 &2023379580
 Transform:
@@ -5379,6 +5381,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 899184880240872970, guid: 71aae037c54295b4eb7ca369d640cbed,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 1347467808974586805, guid: 71aae037c54295b4eb7ca369d640cbed,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -5434,6 +5441,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 1455957441645610232, guid: 71aae037c54295b4eb7ca369d640cbed,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1832759137925306658, guid: 71aae037c54295b4eb7ca369d640cbed,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 3334372634756936289, guid: 71aae037c54295b4eb7ca369d640cbed,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5463,6 +5480,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091054235056411093, guid: 71aae037c54295b4eb7ca369d640cbed,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4403681255481760052, guid: 71aae037c54295b4eb7ca369d640cbed,
         type: 3}

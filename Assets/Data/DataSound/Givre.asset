@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3357586f34d40c40a2c16f77d9557d6, type: 3}
-  m_Name: Tutorial
+  m_Name: Givre
   m_EditorClassIdentifier: 
-  naming: Theme
-  clip: {fileID: 8300000, guid: e7a8d86b659146e43a59488c292b749a, type: 3}
-  volume: 0.2
+  naming: Givre
+  clip: {fileID: 8300000, guid: e4a4ce0b8fb35c04daedf1ceeaab85e2, type: 3}
+  volume: 0.3
   pitch: 1
   loop: 0
   source: {fileID: 0}
