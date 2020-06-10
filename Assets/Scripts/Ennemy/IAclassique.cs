@@ -88,7 +88,7 @@ public class IAclassique : MonoBehaviour
     {
         if (Random.Range(0, 100) <= m_DRopRate)
         {
-            spawningObject = Random.Range(1, 4);
+            spawningObject = Random.Range(1, 3);
             switch (spawningObject)
             {
                 case 1:
