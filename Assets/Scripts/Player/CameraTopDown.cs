@@ -7,6 +7,7 @@ public class CameraTopDown : MonoBehaviour
     public GameObject player;
     public int x;
     public int y;
+    public int z;
     //private float m_CameraOffset;
     Camera cam;
     
@@ -23,6 +24,6 @@ public class CameraTopDown : MonoBehaviour
     }
     public void FollowingPlayer()
     {
-        transform.position = new Vector3(player.transform.position.x + (x), player.transform.position.y + y, player.transform.position.z);
+        transform.position = new Vector3(player.transform.position.x + (x), player.transform.position.y + y, player.transform.position.z + z);
     }
 }
