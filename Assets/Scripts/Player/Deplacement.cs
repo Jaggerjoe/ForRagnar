@@ -237,16 +237,15 @@ public class Deplacement : MonoBehaviour
         Debug.Log("hello");
         anim.Play("Mort");
         controls.Gameplay.Disable();
-       // anim.SetBool("mort", true);
-        //StartCoroutine(DeathPlayer());
+        StartCoroutine(DeathPlayer());
     }
 
-    //IEnumerator DeathPlayer()
-    //{        
-    //    yield return new WaitForSeconds(5);
-    //    SceneManager.LoadScene("GameOver");
-    //    Time.timeScale = 0;
-    //}
+    IEnumerator DeathPlayer()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("GameOver");
+        Time.timeScale = 0;
+    }
 
     void UseSlotInventory()
     {
