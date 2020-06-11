@@ -10,7 +10,7 @@ Animator:
   m_GameObject: {fileID: 3680528199990686805}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 2f57a661f5d973841add1ea9b0d94b7b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9b1f43e33bc45fe46be48df18f02b6f6, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a97a278b55548441b59fa0b51894db7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hpMax: 50
+  hpMax: 60
   health: 50
   OnDie:
     m_PersistentCalls:
