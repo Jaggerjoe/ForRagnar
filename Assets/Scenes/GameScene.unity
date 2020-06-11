@@ -4473,7 +4473,7 @@ MonoBehaviour:
   m_MexEnemy: 30
   particlecircle: {fileID: 4217582544704234260, guid: 3df29f05f10bc2048a7e493dc5be767a,
     type: 3}
-  nextScene: 
+  nextScene: Scene2
   anim: {fileID: 455030347}
   collide: {fileID: 2141318022}
 --- !u!4 &1908088009
@@ -4840,8 +4840,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2064626860}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -57, y: 0, z: -2.985}
-  m_LocalScale: {x: 5.684648, y: 1, z: 8.677217}
+  m_LocalPosition: {x: 0, y: -1.7, z: 0}
+  m_LocalScale: {x: 18.8736, y: 3.3201, z: 28.809227}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
