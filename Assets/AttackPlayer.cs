@@ -22,6 +22,7 @@ public class AttackPlayer : MonoBehaviour
         {
             Debug.Log(other.gameObject.layer);
             anim.SetBool("Attack", true);
+
         }
     }
 
