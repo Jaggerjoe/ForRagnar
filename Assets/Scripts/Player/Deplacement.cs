@@ -75,7 +75,7 @@ public class Deplacement : MonoBehaviour
         loader = FindObjectOfType<ProgressSceneLoader>();
         tuto = FindObjectOfType<TuToManager>();
     }
-
+    
     private void Start()
     {
         m_TimeBetaweenTwoDash = nextDashing;
@@ -90,7 +90,7 @@ public class Deplacement : MonoBehaviour
         if(loader.m_SaveWeapon != null)
         {
             SetWeapon();
-        }      
+        }            
     }
 
     public void OnEnable()

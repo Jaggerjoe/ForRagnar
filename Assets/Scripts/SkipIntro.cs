@@ -8,6 +8,7 @@ public class SkipIntro : MonoBehaviour
     bool isActive = false;
     TuToManager manag;
     public Camera cam,cam2;
+    public GameObject text;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +30,7 @@ public class SkipIntro : MonoBehaviour
             anim.SetBool("Done",false);
             SoundManager.Instance.Stop("Intro");
             manag.timer = 65f;
+            text.SetActive(true);
             Destroy(cam);
         }
     }
