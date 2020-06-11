@@ -77,12 +77,12 @@ public class IAclassique : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
+            anima.SetTrigger("Attac");
             forBlood.BloodParticles();
             forBlood.degatAnim();
-            anima.Play("Attack");
-
             collision.gameObject.GetComponent<Health>().SetDamages(damages);
             StartCoroutine(shakecam.Shake(1f, 0.2f));
+            agent.isStopped = true; 
         }
     }
 
@@ -120,6 +120,11 @@ public class IAclassique : MonoBehaviour
 
     public void hitDraugr ()
     {
-        anima.Play("Frappé");
+        anima.SetBool("Frappé",true);
+    }
+
+    public void Resethit()
+    {
+        anima.SetBool("Frappé", false);
     }
 }

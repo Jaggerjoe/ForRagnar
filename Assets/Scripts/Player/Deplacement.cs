@@ -53,7 +53,7 @@ public class Deplacement : MonoBehaviour
     bool isWeapon1 = false;
     bool isWeapon2 = false;
     bool equiped = false;
-    public GameObject weaponEquiped;
+    public GameObject weaponEquiped;   
 
     #region INPUT
     private void Awake()
@@ -75,7 +75,7 @@ public class Deplacement : MonoBehaviour
         loader = FindObjectOfType<ProgressSceneLoader>();
         tuto = FindObjectOfType<TuToManager>();
     }
-
+    
     private void Start()
     {
         m_TimeBetaweenTwoDash = nextDashing;
@@ -90,7 +90,7 @@ public class Deplacement : MonoBehaviour
         if(loader.m_SaveWeapon != null)
         {
             SetWeapon();
-        }      
+        }            
     }
 
     public void OnEnable()
@@ -119,6 +119,7 @@ public class Deplacement : MonoBehaviour
         {
             if (!m_IsDashing)
             {
+                rb.constraints = RigidbodyConstraints.FreezeRotationX| RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
                 dashes.gameObject.SetActive(true);
                 rb.AddForce(moveDir * speedDash, ForceMode.Impulse);
                 m_IsDashing = true;
@@ -141,6 +142,7 @@ public class Deplacement : MonoBehaviour
             rb.velocity = Vector3.zero;
             gameObject.layer = 8;
             anim.SetBool("Dashing", false);
+            rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ |RigidbodyConstraints.FreezePositionY |RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         }
         else
         {
@@ -156,12 +158,12 @@ public class Deplacement : MonoBehaviour
     {
         //anim.Play("Attack 0", 0, 0.2f);
         anim.SetBool("Attacking", true);
-        attack = true;      
+        attack = true;       
     }
 
     public void CallEvent()
     {       
-        attack = false;      
+        attack = false;       
     }
     #endregion
 
@@ -332,7 +334,7 @@ public class Deplacement : MonoBehaviour
             sword.transform.position = pivot.transform.position;
             sword.transform.rotation = pivot.transform.rotation;
             equiped = true;           
-            weaponEquiped = arme1;
+            weaponEquiped = arme1;          
         }
 
         if (isWeapon2 && !equiped)

@@ -17,6 +17,7 @@ public class TuToManager : MonoBehaviour
     public bool tuto = false;
     public float timer;
     LevelManager levelmanag;
+    public GameObject text;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -66,6 +67,7 @@ public class TuToManager : MonoBehaviour
         timer += Time.deltaTime;
         if (timer >= 65)
         {
+            text.SetActive(true);
             tuto = true;
             timer = 0;
         }                 
