@@ -120,11 +120,6 @@ public class IAclassique : MonoBehaviour
 
     public void hitDraugr ()
     {
-        anima.SetBool("Frappé",true);
-    }
-
-    public void Resethit()
-    {
-        anima.SetBool("Frappé", false);
-    }
+        anima.SetTrigger("Hit");
+    }  
 }

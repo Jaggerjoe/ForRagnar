@@ -36,7 +36,7 @@ public class Deplacement : MonoBehaviour
     Animator anim;
     float m_Damages;
     IAhealth IA;
-    public bool attack;
+    public bool attack = false;
 
     //particles
     [SerializeField]
@@ -119,7 +119,7 @@ public class Deplacement : MonoBehaviour
         {
             if (!m_IsDashing)
             {
-                rb.constraints = RigidbodyConstraints.FreezeRotationX| RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+                rb.constraints = RigidbodyConstraints.FreezeRotationX| RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ|RigidbodyConstraints.FreezePositionY;
                 dashes.gameObject.SetActive(true);
                 rb.AddForce(moveDir * speedDash, ForceMode.Impulse);
                 m_IsDashing = true;
@@ -142,7 +142,7 @@ public class Deplacement : MonoBehaviour
             rb.velocity = Vector3.zero;
             gameObject.layer = 8;
             anim.SetBool("Dashing", false);
-            rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ |RigidbodyConstraints.FreezePositionY |RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+            rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         }
         else
         {
@@ -156,9 +156,8 @@ public class Deplacement : MonoBehaviour
     
     public void MeleAttack()
     {
-        //anim.Play("Attack 0", 0, 0.2f);
-        anim.SetBool("Attacking", true);
-        attack = true;       
+        attack = true;
+        anim.SetBool("Attacking", true);           
     }
 
     public void CallEvent()

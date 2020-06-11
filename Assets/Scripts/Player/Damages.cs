@@ -5,37 +5,47 @@ using UnityEngine;
 public class Damages : MonoBehaviour
 {
     public LayerMask layerM;
-    public int damages;
-    IAclassique draugrHit;
+    public int damages;   
     public bool isOnPlayer = true;
-
-
+    [SerializeField]
+    Deplacement player;
+    IAclassique draugrHit;
     private void Awake()
     {
-       draugrHit = FindObjectOfType<IAclassique>();
+             
     }
+    private void Start()
+    {
+        player = FindObjectOfType<Deplacement>();     
+    }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (isOnPlayer)
+        if(draugrHit != null)
         {
-           Deplacement player = GetComponentInParent<Deplacement>();
-            
-            //if (layerM == other.gameObject.layer)
-            if (player.attack)
+            draugrHit = GetComponent<IAclassique>();
+        }
+        
+        //if (player.attack)
+        {
+            if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
             {
-                if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
-                {              
-                     other.gameObject.GetComponent<Health>().SetDamages(damages);
-                     other.gameObject.transform.Translate(0f , 0f, -3f);
-                     draugrHit.hitDraugr();
-                }
+                if (player.attack)
+                {
+                    other.gameObject.GetComponent<Health>().SetDamages(damages);
+                    other.gameObject.transform.Translate(0f, 0f, -3f);
+                    draugrHit.hitDraugr();
+                }                    
+            }
                 
-                if (other.gameObject.layer == LayerMask.NameToLayer("Mummy"))
+            if (other.gameObject.layer == LayerMask.NameToLayer("Mummy"))
+            {
+                if (player.attack)
                 {
                     other.gameObject.GetComponent<SetDamages>().AffichagesDegats(damages);
-                    other.gameObject.GetComponent<SetDamages>().PlayAnim();               
-                }
-            }   
-        }        
+                    other.gameObject.GetComponent<SetDamages>().PlayAnim();
+                }                              
+            }
+        }              
     }
 }
