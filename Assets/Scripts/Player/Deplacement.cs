@@ -119,6 +119,7 @@ public class Deplacement : MonoBehaviour
         {
             if (!m_IsDashing)
             {
+                rb.constraints = RigidbodyConstraints.FreezeRotationX| RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
                 dashes.gameObject.SetActive(true);
                 rb.AddForce(moveDir * speedDash, ForceMode.Impulse);
                 m_IsDashing = true;
@@ -141,6 +142,7 @@ public class Deplacement : MonoBehaviour
             rb.velocity = Vector3.zero;
             gameObject.layer = 8;
             anim.SetBool("Dashing", false);
+            rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ |RigidbodyConstraints.FreezePositionY |RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         }
         else
         {

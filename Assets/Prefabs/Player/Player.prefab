@@ -5039,7 +5039,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749580454773505302}
   m_LocalRotation: {x: -1, y: -0, z: -0, w: 0.0000014305114}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.23, z: 0.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4541817852653670617}
@@ -5060,7 +5060,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -5128,7 +5128,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: 3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5759,7 +5759,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 2.5
       mode: 0
       spread: 0
       speed:
@@ -19467,13 +19467,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3886750012235613357}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.476, y: 0, z: 0.20500001}
+  m_LocalRotation: {x: -0.30781138, y: -0.6374862, z: 0.6961889, w: -0.11909858}
+  m_LocalPosition: {x: -0.364, y: 0.037, z: 0.078}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 560837805800730490}
-  m_Father: {fileID: 2169247177096121375}
-  m_RootOrder: 2
+  m_Father: {fileID: 8996941137558357801}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4379122571635206648
 GameObject:
@@ -24358,7 +24358,7 @@ Transform:
   m_Children:
   - {fileID: 257030235410371297}
   m_Father: {fileID: 2169247177096121375}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7079040341467746950
 GameObject:
@@ -24812,7 +24812,7 @@ MonoBehaviour:
   bloodParticle: {fileID: 4601040449653598241}
   tuto: {fileID: 0}
   speed: 10
-  speedDash: 20
+  speedDash: 30
   nextDashing: 3
   slider: {fileID: 3651061085416432856}
   attack: 0
@@ -24895,7 +24895,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &8853636041900876343
 GameObject:
@@ -25130,6 +25130,12 @@ PrefabInstance:
 --- !u!1 &2900862455112777228 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: c746e9b05b378df4ba6c6eeff2081795,
+    type: 3}
+  m_PrefabInstance: {fileID: 6584264987337615109}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8996941137558357801 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -6360335751962484692, guid: c746e9b05b378df4ba6c6eeff2081795,
     type: 3}
   m_PrefabInstance: {fileID: 6584264987337615109}
   m_PrefabAsset: {fileID: 0}

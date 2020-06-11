@@ -27,8 +27,9 @@ public class Damages : MonoBehaviour
                 {              
                      other.gameObject.GetComponent<Health>().SetDamages(damages);
                      other.gameObject.transform.Translate(0f , 0f, -3f);
-                    draugrHit.hitDraugr();
+                     draugrHit.hitDraugr();
                 }
+                
                 if (other.gameObject.layer == LayerMask.NameToLayer("Mummy"))
                 {
                     other.gameObject.GetComponent<SetDamages>().AffichagesDegats(damages);
