@@ -20,7 +20,7 @@ public class IAclassique : MonoBehaviour
     public bool isArme2 = false;
     public GameObject particles;
     public bool isStun = false;
-
+    public Animator anima;
     float timeBeforeMove;
     public virtual void Start()
     {
@@ -79,6 +79,8 @@ public class IAclassique : MonoBehaviour
         {
             forBlood.BloodParticles();
             forBlood.degatAnim();
+            anima.Play("Attack");
+
             collision.gameObject.GetComponent<Health>().SetDamages(damages);
             StartCoroutine(shakecam.Shake(1f, 0.2f));
         }
@@ -114,5 +116,10 @@ public class IAclassique : MonoBehaviour
         gM.ennemyClassique -= 1;
         Destroy(gameObject);
         DropHealth();      
+    }
+
+    public void hitDraugr ()
+    {
+        anima.Play("Frappé");
     }
 }

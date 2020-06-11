@@ -6,9 +6,14 @@ public class Damages : MonoBehaviour
 {
     public LayerMask layerM;
     public int damages;
-    
+    IAclassique draugrHit;
     public bool isOnPlayer = true;
 
+
+    private void Awake()
+    {
+       draugrHit = FindObjectOfType<IAclassique>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (isOnPlayer)
@@ -22,6 +27,7 @@ public class Damages : MonoBehaviour
                 {              
                      other.gameObject.GetComponent<Health>().SetDamages(damages);
                      other.gameObject.transform.Translate(0f , 0f, -3f);
+                    draugrHit.hitDraugr();
                 }
                 if (other.gameObject.layer == LayerMask.NameToLayer("Mummy"))
                 {
