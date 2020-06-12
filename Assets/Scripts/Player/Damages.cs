@@ -44,6 +44,7 @@ public class Damages : MonoBehaviour
                 {
                     other.gameObject.GetComponent<SetDamages>().AffichagesDegats(damages);
                     other.gameObject.GetComponent<SetDamages>().PlayAnim();
+                    Debug.Log(player.attack);
                 }                              
             }
         }              

@@ -157,13 +157,18 @@ public class Deplacement : MonoBehaviour
     public void MeleAttack()
     {
         attack = true;
-        anim.SetBool("Attacking", true);           
+        StartCoroutine(ResetAttack());  
+    }  
+     public IEnumerator ResetAttack()
+    {
+        if(attack)
+        {
+            anim.SetTrigger("Attacking");
+        }
+        yield return new WaitForSeconds(1,5);
+        attack = false;
     }
 
-    public void CallEvent()
-    {       
-        attack = false;       
-    }
     #endregion
 
     #region MOVEMENT
@@ -228,7 +233,7 @@ public class Deplacement : MonoBehaviour
                 controls.Enable();
             }
         }
-        
+        Debug.Log("ATTACK : " + attack);
     }
 
     public void Die()
@@ -292,7 +297,7 @@ public class Deplacement : MonoBehaviour
 
     public void degatAnim()
     {
-        anim.Play("Frappé");
+        anim.SetTrigger("Hit");
 
     }
     #region lootweapon
