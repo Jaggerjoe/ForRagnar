@@ -20,12 +20,7 @@ public class Damages : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other)
-    {
-        if(draugrHit != null)
-        {
-            draugrHit = GetComponent<IAclassique>();
-        }
-        
+    {                           
         //if (player.attack)
         {
             if (other.gameObject.layer == LayerMask.NameToLayer("Enemy"))
@@ -34,7 +29,7 @@ public class Damages : MonoBehaviour
                 {
                     other.gameObject.GetComponent<Health>().SetDamages(damages);
                     other.gameObject.transform.Translate(0f, 0f, -3f);
-                    draugrHit.hitDraugr();
+                    other.gameObject.GetComponent<IAclassique>().hitDraugr();
                 }                    
             }
                 
@@ -44,6 +39,7 @@ public class Damages : MonoBehaviour
                 {
                     other.gameObject.GetComponent<SetDamages>().AffichagesDegats(damages);
                     other.gameObject.GetComponent<SetDamages>().PlayAnim();
+                    Debug.Log(player.attack);
                 }                              
             }
         }              

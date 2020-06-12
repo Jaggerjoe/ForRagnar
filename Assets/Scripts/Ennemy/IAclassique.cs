@@ -82,7 +82,8 @@ public class IAclassique : MonoBehaviour
             forBlood.degatAnim();
             collision.gameObject.GetComponent<Health>().SetDamages(damages);
             StartCoroutine(shakecam.Shake(1f, 0.2f));
-            agent.isStopped = true; 
+            agent.isStopped = true;
+            Invoke("FollowingAgain", 1.5f);
         }
     }
 
@@ -121,5 +122,11 @@ public class IAclassique : MonoBehaviour
     public void hitDraugr ()
     {
         anima.SetTrigger("Hit");
-    }  
+        agent.isStopped = true;
+        Invoke("FollowingAgain",1.5f);
+    }     
+    void FollowingAgain()
+    {
+        agent.isStopped = false;
+    }
 }

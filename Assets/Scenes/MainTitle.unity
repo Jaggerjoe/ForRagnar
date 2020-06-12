@@ -797,6 +797,7 @@ MonoBehaviour:
   progressText: {fileID: 184940537}
   slider: {fileID: 665459515}
   m_SaveLife: 50
+  m_SaveWeapon: {fileID: 0}
 --- !u!4 &945272433
 Transform:
   m_ObjectHideFlags: 0

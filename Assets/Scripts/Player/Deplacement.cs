@@ -53,8 +53,8 @@ public class Deplacement : MonoBehaviour
     bool isWeapon1 = false;
     bool isWeapon2 = false;
     bool equiped = false;
-    public GameObject weaponEquiped;   
-
+    public GameObject weaponEquiped;
+   
     #region INPUT
     private void Awake()
     {     
@@ -157,12 +157,13 @@ public class Deplacement : MonoBehaviour
     public void MeleAttack()
     {
         attack = true;
-        anim.SetBool("Attacking", true);           
-    }
+        anim.SetTrigger("Attacking");
+        Invoke("ResetAttack", 2f);  
+    }  
 
-    public void CallEvent()
-    {       
-        attack = false;       
+    public void ResetAttack()
+    {
+        attack = false;
     }
     #endregion
 
@@ -228,7 +229,7 @@ public class Deplacement : MonoBehaviour
                 controls.Enable();
             }
         }
-        
+        Debug.Log("ATTACK : " + attack);
     }
 
     public void Die()
@@ -292,7 +293,7 @@ public class Deplacement : MonoBehaviour
 
     public void degatAnim()
     {
-        anim.Play("Frappé");
+        anim.SetTrigger("Hit");
 
     }
     #region lootweapon
@@ -347,8 +348,8 @@ public class Deplacement : MonoBehaviour
 
     void SetWeapon()
     {
-        Instantiate(loader.m_SaveWeapon, pivot.transform.parent);
-        weaponEquiped = loader.m_SaveWeapon;
+        Instantiate(loader.m_SaveWeapon, pivot.transform.position,Quaternion.identity,pivot.transform.parent);       
+        weaponEquiped = loader.m_SaveWeapon;        
     }
     #endregion
 }
