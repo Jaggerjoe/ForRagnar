@@ -157,18 +157,14 @@ public class Deplacement : MonoBehaviour
     public void MeleAttack()
     {
         attack = true;
-        StartCoroutine(ResetAttack());  
+        anim.SetTrigger("Attacking");
+        Invoke("ResetAttack", 2f);  
     }  
-     public IEnumerator ResetAttack()
+
+    public void ResetAttack()
     {
-        if(attack)
-        {
-            anim.SetTrigger("Attacking");
-        }
-        yield return new WaitForSeconds(1,5);
         attack = false;
     }
-
     #endregion
 
     #region MOVEMENT
