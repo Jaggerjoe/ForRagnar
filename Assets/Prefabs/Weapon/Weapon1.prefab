@@ -4925,6 +4925,7 @@ MonoBehaviour:
     m_Bits: 512
   damages: 10
   isOnPlayer: 1
+  player: {fileID: 0}
 --- !u!65 &1887416303705285469
 BoxCollider:
   m_ObjectHideFlags: 0

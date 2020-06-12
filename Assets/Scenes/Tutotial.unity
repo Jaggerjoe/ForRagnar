@@ -1190,7 +1190,7 @@ MonoBehaviour:
   weapon: {fileID: 0}
   axe: {fileID: 0}
   arme2: {fileID: 1505836815839399180, guid: 2bb3fd170ed92954b86125c7cfd00d65, type: 3}
-  arme1: {fileID: 3696694311665547368, guid: 6c8b54da6e7f17245b552f0399e01e45, type: 3}
+  arme1: {fileID: 2761527365168800127, guid: 918e937715461104482f046be30acdff, type: 3}
   fireBall: {fileID: 5061883378166976268, guid: 936687e3ab9a30c4b93f1a66570f05c3,
     type: 3}
   Givre: {fileID: 5061883378166976268, guid: f4c013ba7f8e17a4ea2f8cbbe5b9bdfd, type: 3}
@@ -2547,7 +2547,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758942842}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.58, z: -29.78}
+  m_LocalPosition: {x: 0, y: 0, z: -29.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1425821362}

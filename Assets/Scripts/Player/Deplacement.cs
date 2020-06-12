@@ -53,8 +53,8 @@ public class Deplacement : MonoBehaviour
     bool isWeapon1 = false;
     bool isWeapon2 = false;
     bool equiped = false;
-    public GameObject weaponEquiped;   
-
+    public GameObject weaponEquiped;
+   
     #region INPUT
     private void Awake()
     {     
@@ -348,8 +348,8 @@ public class Deplacement : MonoBehaviour
 
     void SetWeapon()
     {
-        Instantiate(loader.m_SaveWeapon, pivot.transform.parent);
-        weaponEquiped = loader.m_SaveWeapon;
+        Instantiate(loader.m_SaveWeapon, pivot.transform.position,Quaternion.identity,pivot.transform.parent);       
+        weaponEquiped = loader.m_SaveWeapon;        
     }
     #endregion
 }
