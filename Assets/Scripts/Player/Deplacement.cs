@@ -119,7 +119,7 @@ public class Deplacement : MonoBehaviour
         {
             if (!m_IsDashing)
             {
-                rb.constraints = RigidbodyConstraints.FreezeRotationX| RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ|RigidbodyConstraints.FreezePositionY;
+                rb.constraints = RigidbodyConstraints.FreezeRotationX| RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY;
                 dashes.gameObject.SetActive(true);
                 rb.AddForce(moveDir * speedDash, ForceMode.Impulse);
                 m_IsDashing = true;
@@ -142,7 +142,7 @@ public class Deplacement : MonoBehaviour
             rb.velocity = Vector3.zero;
             gameObject.layer = 8;
             anim.SetBool("Dashing", false);
-            rb.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+            rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
         }
         else
         {
@@ -348,8 +348,11 @@ public class Deplacement : MonoBehaviour
 
     void SetWeapon()
     {
-        Instantiate(loader.m_SaveWeapon, pivot.transform.position,Quaternion.identity,pivot.transform.parent);       
-        weaponEquiped = loader.m_SaveWeapon;        
+        if(loader.m_SaveWeapon != null)
+        {
+            Instantiate(loader.m_SaveWeapon, pivot.transform.position, Quaternion.identity, pivot.transform.parent);
+            weaponEquiped = loader.m_SaveWeapon;
+        }           
     }
     #endregion
 }
