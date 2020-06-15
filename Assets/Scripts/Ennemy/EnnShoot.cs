@@ -8,7 +8,7 @@ public class EnnShoot : IAclassique
     public float rangeBack;
     public float range = 3f;
     public float bulletImpulse = 20.0f;
-
+    public Animator animeuh;
     private bool onRange = false;
     private bool onRangeBack = false;
     
@@ -34,7 +34,8 @@ public class EnnShoot : IAclassique
     void Shoot()
     {       
         if (onRange && !onRangeBack)
-        { 
+        {
+            animeuh.Play("Attack");
 
             Rigidbody bullet = (Rigidbody)Instantiate(projectile, transform.position + transform.forward, transform.rotation);
             bullet.AddForce(transform.forward * bulletImpulse, ForceMode.Impulse);
