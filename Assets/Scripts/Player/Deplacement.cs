@@ -142,7 +142,7 @@ public class Deplacement : MonoBehaviour
             rb.velocity = Vector3.zero;
             gameObject.layer = 8;
             anim.SetBool("Dashing", false);
-            rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+            rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ| RigidbodyConstraints.FreezePositionY;
         }
         else
         {
