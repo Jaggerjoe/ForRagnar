@@ -3427,7 +3427,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 74da9d5b49fe2b0448ad2fb17ce71154, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 45f0ee7759d817e46a97fb8572c1db7b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6064,10 +6064,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 5
+    m_MinSize: 4
     m_MaxSize: 50
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -6075,12 +6075,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Press A/B use Spell
-
-    Press MB0/X for attack
-
-    press Shift/A for
-    Dash'
+  m_Text: "Utilise Z,Q,S,D pour te Deplacer\nAppuyer sur A/B pour utilis\xE9 le Sort\nAppuyer
+    MB0/X pour Attaquer\nAppuyer Shift/A pour Dash"
 --- !u!222 &2107912146
 CanvasRenderer:
   m_ObjectHideFlags: 0
